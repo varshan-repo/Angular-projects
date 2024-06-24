@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
+import { UsersComponent } from './users/users.component';
+import { DUMMY_USERS } from './dummy-users';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  imports: [HeaderComponent, UsersComponent],
 })
 export class AppComponent {
-  title = 'task-management';
+  users = DUMMY_USERS;
 }
